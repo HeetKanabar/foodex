@@ -62,6 +62,9 @@ flutter:
   assets:
      - assets/veggie_tomato_mix.png
      - assets/spicy_fish_sauce.png
+     - assets/person1.png
+     - assets/person2.png
+     - assets/shafes.png
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -27,7 +27,7 @@ class FoodDeliveryApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: AppRoutes.loginScreen,
+      initialRoute: AppRoutes.homeScreen,
       routes: AppRoutes.routes,
     );
   }
