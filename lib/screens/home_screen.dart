@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodex/routes/app_routes.dart';
 import '../widgets/category_item.dart';
 import '../widgets/food_card.dart';
 import '../models/food_item.dart';
@@ -80,12 +81,18 @@ class HomeScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
+        onTap: (newIndex) => {
+          if (newIndex == 2)
+            {Navigator.pushNamed(context, AppRoutes.profileScreen)}
+          else if (newIndex == 3)
+            {Navigator.pushNamed(context, AppRoutes.cartScreen)}
+        },
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: '',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
@@ -93,11 +100,11 @@ class HomeScreen extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            label: '',
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.refresh),
-            label: '',
+            icon: Icon(Icons.shopping_bag),
+            label: 'Cart',
           ),
         ],
       ),
