@@ -1,6 +1,8 @@
 // screens/cart_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:foodex/routes/app_routes.dart';
+import 'package:foodex/screens/checkout_screen.dart';
 import '../models/cart_item_model.dart';
 import '../widgets/cart_item_card.dart';
 
@@ -118,6 +120,7 @@ class _CartScreenState extends State<CartScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   // Handle order completion
+                  Navigator.pushNamed(context, AppRoutes.checkoutScreen);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,

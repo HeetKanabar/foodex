@@ -14,16 +14,99 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.black),
-          onPressed: () {},
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.menu, color: Colors.black),
+        //   onPressed: () {
+            
+        //   },
+        // ),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.black),
             onPressed: () {},
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: Container(
+          color: Colors.orange,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              DrawerHeader(
+                child: Text(
+                  'Menu',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.person, color: Colors.white),
+                title: Text(
+                  'Profile',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Navigate to profile
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.shopping_bag, color: Colors.white),
+                title: Text(
+                  'Orders',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Navigate to orders
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.local_offer, color: Colors.white),
+                title: Text(
+                  'Offer and Promo',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Navigate to offers and promo
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.privacy_tip, color: Colors.white),
+                title: Text(
+                  'Privacy Policy',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Navigate to privacy policy
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.security, color: Colors.white),
+                title: Text(
+                  'Security',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Navigate to security
+                },
+              ),
+              Spacer(),
+              ListTile(
+                leading: Icon(Icons.logout, color: Colors.white),
+                title: Text(
+                  'Sign-out',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Handle sign out
+                },
+              ),
+            ],
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
