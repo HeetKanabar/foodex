@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodex/screens/SplashScreen.dart';
 import 'package:foodex/screens/cart_screen.dart';
+import 'package:foodex/screens/fav_screen.dart';
 import 'package:foodex/screens/home_screen.dart';
 import 'package:foodex/screens/payment_screen.dart';
 import 'package:foodex/screens/product_screen.dart';
@@ -19,6 +20,7 @@ class AppRoutes {
   static const String cartScreen = '/cartScreen';
   static const String checkoutScreen = '/checkoutScreen';
   static const String paymentScreen = '/paymentScreen';
+  static const String favortieScreen = '/paymentScreen';
 
   static Map<String, WidgetBuilder> routes = {
     loginScreen: (context) => LoginScreen(),
@@ -30,5 +32,6 @@ class AppRoutes {
     cartScreen : (context) => CartScreen(),
     checkoutScreen : (context) => CheckoutScreen(),
     paymentScreen : (context) => PaymentScreen(),
+    favortieScreen : (context) => FavScreen(),
   };
 }

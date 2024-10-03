@@ -169,6 +169,9 @@ class HomeScreen extends StatelessWidget {
             {Navigator.pushNamed(context, AppRoutes.profileScreen)}
           else if (newIndex == 3)
             {Navigator.pushNamed(context, AppRoutes.cartScreen)}
+            else if(newIndex == 1){
+              Navigator.pushNamed(context, AppRoutes.favortieScreen)
+            }
         },
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.grey,
@@ -179,7 +182,7 @@ class HomeScreen extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
-            label: '',
+            label: 'liked',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
